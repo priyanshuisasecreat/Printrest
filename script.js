@@ -1,128 +1,130 @@
-var arr = [
-    {name: "Petals of roses", image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?q=80&w=3786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {name: "Animals of town", image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    {name: "the crowd of city", image: "https://images.unsplash.com/photo-1517732306149-e8f829eb588a?q=80&w=3872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    {name: "fruits of planet", image: "https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?q=80&w=3764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    {name: "orange peeled", image: "https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=3337&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {name: "web design", image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {name: "apple juice", image: "https://images.unsplash.com/photo-1576673442511-7e39b6545c87?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {name: "Astronaut in space", image: "https://plus.unsplash.com/premium_photo-1682124752476-40db22034a58?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {
-        name: "Anime", image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-    },
+ // --- DATA ---
+        // Array of post objects. Each object has a name and an image URL.
+        const arr = [
+            { name: "Petals of roses", image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?q=80&w=800&auto=format&fit=crop" },
+            { name: "Animals of town", image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop" },
+            { name: "The crowd of city", image: "https://images.unsplash.com/photo-1517732306149-e8f829eb588a?q=80&w=800&auto=format&fit=crop" },
+            { name: "Fruits of planet", image: "https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?q=80&w=800&auto=format&fit=crop" },
+            { name: "Orange peeled", image: "https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=800&auto=format&fit=crop" },
+            { name: "Web design", image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=800&auto=format&fit=crop" },
+            { name: "Apple juice", image: "https://images.unsplash.com/photo-1576673442511-7e39b6545c87?q=80&w=800&auto=format&fit=crop" },
+            { name: "Astronaut in space", image: "https://plus.unsplash.com/premium_photo-1682124752476-40db22034a58?q=80&w=800&auto=format&fit=crop" },
+            { name: "Anime wallpaper", image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=800&auto=format&fit=crop" },
+            { name: "Misa Amane", image: "https://images.unsplash.com/photo-1673047233450-57066e5ae49d?q=80&w=800&auto=format&fit=crop" },
+            { name: "Ryuk from Death Note", image: "https://images.unsplash.com/photo-1733519786430-e42dc635b1c2?q=80&w=687&auto=format&fit=crop" },
+            { name: "Zenitsu Agatsuma", image: "https://images.unsplash.com/photo-1705932461994-6fb2b07f27dd?q=80&w=670&auto=format&fit=crop" },
+            { name: "Nezuko Kamado", image: "https://images.unsplash.com/photo-1705912090259-195fd30509e2?q=80&w=698&auto=format&fit=crop" },
+            { name: "Itachi Uchiha", image: "https://images.unsplash.com/photo-1677143016687-8dbb7e71db08?q=80&w=800&auto=format&fit=crop" },
+            { name: "Vibrant sky", image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=735&auto=format&fit=crop" },
+            { name: "Fashion model", image: "https://images.unsplash.com/photo-1661980686546-148c752ccaa7?q=80&w=687&auto=format&fit=crop" }
+        ];
 
-    {
-        name: "Misa Amaane", image: "https://images.unsplash.com/photo-1673047233450-57066e5ae49d?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-        name: "Ryuk", image: "https://images.unsplash.com/photo-1733519786430-e42dc635b1c2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-
-    {
-        name: "Zenitsu Agatsuma", image: "https://images.unsplash.com/photo-1705932461994-6fb2b07f27dd?q=80&w=670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-
-    {
-        name:"Nezuko Kamado", image: "https://images.unsplash.com/photo-1705912090259-195fd30509e2?q=80&w=698&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-        name: "Itachi Uchiha", image: "https://images.unsplash.com/photo-1677143016687-8dbb7e71db08?q=80&w=1355&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-
-    {
-        name: "Sky", image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-
-    {
-        name: "Model", image: "https://images.unsplash.com/photo-1661980686546-148c752ccaa7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    }
-]
+        // --- DOM ELEMENTS ---
+        const searchInput = document.querySelector("#searchinput");
+        const searchDataContainer = document.querySelector(".searchdata");
+        const overlay = document.querySelector("#page-overlay");
+        const postContainer = document.querySelector(".container");
+        const homeButton = document.querySelector("#home");
+        const closeSearchButton = document.querySelector("#close-search");
 
 
-function showTheCards(){
-    var clutter = "";
-    arr.forEach(function(obj) {
-        clutter += `<div class="box">
-        <img class="cursor-pointer" src="${obj.image}" alt="image">
-        <div class="caption">Lorem ipsum </div>
-    </div>`; 
+        // --- FUNCTIONS ---
 
+        /**
+         * Renders the image cards on the page.
+         * @param {Array} data - The array of post objects to display. Defaults to the full 'arr'.
+         */
+        function showTheCards(data = arr) {
+            let clutter = "";
+            data.forEach(function(obj) {
+                // **FIXED**: Now uses obj.name for the caption instead of placeholder text.
+                clutter += `<div class="box">
+                    <div class="overlay-hover"></div>
+                    <img src="${obj.image}" alt="${obj.name}">
+                    <div class="caption">${obj.name}</div>
+                </div>`;
+            });
+            postContainer.innerHTML = clutter;
+        }
 
-    })
-    document.querySelector(".container").innerHTML = clutter;
-}
+        /**
+         * Hides the search overlay and results dropdown.
+         */
+        function hideSearch() {
+            overlay.classList.add("hidden");
+            searchDataContainer.classList.add("hidden");
+        }
 
+        /**
+         * Handles all search-related functionality.
+         */
+        function handleSearchFunctionality() {
+            // Show overlay when the user focuses on the search input
+            searchInput.addEventListener("focus", function() {
+                overlay.classList.remove("hidden");
+            });
 
-function handleSearchFunctionality() {
+            // Filter and display search results as the user types
+            searchInput.addEventListener("input", function() {
+                const searchTerm = this.value.toLowerCase().trim();
 
-    document.querySelector("#searchinput").addEventListener("focus", function() {
-        document.querySelector(".overlay").style.display = "block";
-    });
+                if (searchTerm === "") {
+                    searchDataContainer.classList.add("hidden");
+                    return;
+                }
 
-    document.querySelector("#searchinput").addEventListener("input", function() {
-        const input = this; // Fix: get the input element
-        const filteredArray = arr.filter(obj => obj.name.toLowerCase().startsWith(input.value.toLowerCase()));
-        var clutter = "";
-        filteredArray.forEach(function(obj) {
-            clutter += `<div class="res flex px-8 py-3"> <i class="ri-search-line font-semibold mr-5"></i> <h3 class="font-semibold">${obj.name}</h3></div>`;
+                const filteredArray = arr.filter(obj => obj.name.toLowerCase().includes(searchTerm));
+                let clutter = "";
+                filteredArray.forEach(function(obj) {
+                    // **IMPROVED**: Added a data-name attribute to identify the clicked item.
+                    clutter += `<div class="res flex items-center px-5 py-3 hover:bg-zinc-100 cursor-pointer" data-name="${obj.name}">
+                        <i class="ri-search-line font-semibold mr-3 text-zinc-500"></i>
+                        <h3 class="font-semibold text-sm">${obj.name}</h3>
+                    </div>`;
+                });
+
+                searchDataContainer.innerHTML = clutter;
+                searchDataContainer.classList.remove("hidden");
+            });
+
+            // **NEW**: Added event listener to handle clicks on search results.
+            searchDataContainer.addEventListener("click", function(event) {
+                const clickedResult = event.target.closest('.res');
+                if (clickedResult) {
+                    const clickedName = clickedResult.dataset.name;
+                    const resultToShow = arr.filter(obj => obj.name === clickedName);
+                    showTheCards(resultToShow); // Show only the clicked card
+                    searchInput.value = clickedName; // Put the name in the search bar
+                    hideSearch();
+                }
+            });
+        }
+
+        // --- EVENT LISTENERS ---
+
+        // Click the overlay to close the search dropdown
+        overlay.addEventListener("click", hideSearch);
+
+        // Click the 'Home' button to show all cards again
+        homeButton.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            searchInput.value = ""; // Clear search input
+            showTheCards(); // Show all cards
         });
-        const searchData = document.querySelector(".searchdata");
-        searchData.classList.remove("hidden"); // Remove hidden class to show
-        searchData.innerHTML = clutter;
-    });
+
+        // **NEW**: Click the 'X' icon in the search bar to clear it
+        closeSearchButton.addEventListener("click", function() {
+            searchInput.value = "";
+            searchDataContainer.classList.add("hidden");
+            showTheCards(); // Reset to show all cards
+            searchInput.focus(); // Keep the search bar active
+        });
 
 
+        // --- INITIALIZATION ---
 
-    document.querySelector("#searchinput").addEventListener("blur", function() {
-        document.querySelector(".overlay").style.display = "none";
-        document.querySelector(".searchdata").classList.add("hidden"); // Hide search list
-    });
-}
+        // Initial call to display all cards when the page loads
+        showTheCards();
 
-
-document.querySelector(".overlay").addEventListener("click", function() {
-    document.querySelector(".overlay").style.display = "none";
-    document.querySelector(".searchdata").classList.add("hidden"); // Hide search list
-});
-
-
-
-
-
-
-
-
-    document.querySelector("#home").addEventListener("mouseover", function() {
-    document.querySelector("#home").style.color = "red";
-});
-document.querySelector("#home").addEventListener("mouseout", function() {
-    document.querySelector("#home").style.color = "black";
-
-
-});
-
-
-
-
-document.querySelector("#explore").addEventListener("mouseover", function() {
-    document.querySelector("#explore").style.color = "red";
-});
-document.querySelector("#explore").addEventListener("mouseout", function() {
-    document.querySelector("#explore").style.color = "black";
-});
-
-
-document.querySelector("#create").addEventListener("mouseover", function() {
-    document.querySelector("#create").style.color = "red";
-});
-document.querySelector("#create").addEventListener("mouseout", function() {
-    document.querySelector("#create").style.color = "black";
-});
-
-document.querySelector("#notification").addEventListener("click", function() {
-    document.querySelector("#notification").style.color = "red";
-});
-
-
-handleSearchFunctionality();
-showTheCards();
+        // Initialize all search-related event listeners
+        handleSearchFunctionality();
